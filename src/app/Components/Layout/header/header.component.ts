@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import { Router } from '@angular/router';
 
@@ -10,14 +10,11 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  ngOnInit(){}
-  items: MenuItem[];
-
-    constructor() {
+    items!: MenuItem[];
+    ngOnInit(): void {
         this.items = [
             {
                 label:'Employee',
-                routerLink:['/employee'],
                 items:[
                     {
                         label:'Add Employee',
@@ -26,12 +23,15 @@ export class HeaderComponent {
                     {
                         label:'Update Employee',
                         routerLink: ['/employee/update-employee']
+                    },
+                    {
+                        label:'Employee List',
+                        routerLink: ['/employee/employee-list']
                     }
                 ]
             },
             {
                 label:'Department',
-                routerLink:['/department'],
                 items:[
                     {
                         label:'Add New Department',
@@ -40,22 +40,27 @@ export class HeaderComponent {
                     {
                         label:'Update Department',
                         routerLink: ['/department/update-department']
+                    },
+                    {
+                        label:'Department List',
+                        routerLink: ['/department/department-list']
                     }
                 ]
             },
             {
-                label:'Jobs',
-                routerLink: ['/job'],
+                label:'Job',
                 items:[
                     {
                         label:'Add Job',
                         routerLink: ['/job/add-job']
-
                     },
                     {
                         label:'Update Job',
                         routerLink: ['/job/update-job']
-
+                    },
+                    {
+                        label:'Job List',
+                        routerLink: ['/job/job-list']
                     }
                 ]
             }

@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { JobRoutingModule } from './job-routing.module';
+import { JobListComponent } from './job-list/job-list.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    JobListComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    JobRoutingModule
   ]
 })
 export class JobModule { }
