@@ -13,16 +13,7 @@ import { MainRoutingModule } from './main-routing.module';
 
 
 @NgModule({
-  declarations: [
-    EmployeeComponent,
-    DepartmentComponent,
-    JobComponent,
-    AddEmployeeComponent,
-    UpdateEmployeeComponent,
-    AddDepartmentComponent,
-    AddJobsComponent,
-    UpdateJobComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     MainRoutingModule
