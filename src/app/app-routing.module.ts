@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path:'',
     loadChildren: () => import("../app/Components/Layout/header/header.module").then((z) => z.HeaderModule)
-  },
+  }
 
 ];
 

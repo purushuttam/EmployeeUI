@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,59 +17,45 @@ export class HeaderComponent {
         this.items = [
             {
                 label:'Employee',
+                routerLink:['/employee'],
                 items:[
                     {
-                        label:'Employee List',
-                        routerLink: 'employee/employee-list'
-                    },
-                    {
                         label:'Add Employee',
-                        routerLink: 'employee/add-employee'
+                        routerLink: ['/employee/add-employee'],
                     },
                     {
                         label:'Update Employee',
-                        routerLink: 'employee/update-employee'
+                        routerLink: ['/employee/update-employee']
                     }
                 ]
             },
             {
                 label:'Department',
+                routerLink:['/department'],
                 items:[
                     {
                         label:'Add New Department',
-                        routerLink: 'department/add-department'
+                        routerLink: ['/department/add-department']
                     },
                     {
                         label:'Update Department',
-                        routerLink: 'department/update-department'
-                    },
-                    {
-                        label:'Department List',
-                        routerLink: 'department/department-list'
-                    },
-                    {
-                        label:'Justify',
-                        routerLink: 'department/update-employee'
-                    },
-
+                        routerLink: ['/department/update-department']
+                    }
                 ]
             },
             {
                 label:'Jobs',
+                routerLink: ['/job'],
                 items:[
                     {
                         label:'Add Job',
-                        routerLink: 'job/add-job'
+                        routerLink: ['/job/add-job']
 
                     },
                     {
                         label:'Update Job',
-                        routerLink: 'job/update-job'
+                        routerLink: ['/job/update-job']
 
-                    },
-                    {
-                        label:'Job List',
-                        routerLink: 'job/job-list'
                     }
                 ]
             }
